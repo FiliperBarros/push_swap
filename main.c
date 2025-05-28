@@ -6,7 +6,7 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 22:14:38 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/05/23 22:14:38 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/05/27 18:29:23 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,11 @@ int	main(int argc, char **argv)
 	if (argc == 2)
 		argv = ft_split(argv[1], " ");
 	stack_init(&a, argv + 1, argc == 2);
-
-	if (!stack_sorted)
+	if (!stack_sorted(&a))
 	{
 		if(lst_size(&a) == 2)
 			sa(&a);
-		else if )ize(&a) == 3)
+		else if(lst_size(&a) == 3)
 			tiny_sort(&a);
 		else
 			push_swap(&a);
