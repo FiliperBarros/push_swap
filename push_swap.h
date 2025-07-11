@@ -6,7 +6,7 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 18:56:28 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/07/07 16:40:14 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/07/11 15:56:38 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,27 @@
 # include <limits.h>
 # include "libft/libft.h"
 
-typedef struct s_stack_node
+
+typedef struct s_stack
 {
 	int					value;
-	struct s_stack_node	*next;
-}				t_stack_node;
+	int					index;
+	struct s_stack		*next;
+}				t_stack;
+
+
+
+t_stack	*get_last_node(t_stack *stack);
+void	print_stack(t_stack *a);
+
+
+				// OPERATIONS
+void	push(t_stack	*stack_to, t_stack	*stack_from);
+void	rotate(t_stack	*stack);
+void	pa(t_stack	*a, t_stack	*b);
+void	pb(t_stack	*b, t_stack	*a);
+void	ra(t_stack *a);
+
+
 
 #endif

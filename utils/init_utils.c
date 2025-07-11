@@ -1,26 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tiny_sort.c                                        :+:      :+:    :+:   */
+/*   init_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/23 18:53:53 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/07/10 14:13:42 by frocha-b         ###   ########.fr       */
+/*   Created: 2025/07/10 17:54:25 by frocha-b          #+#    #+#             */
+/*   Updated: 2025/07/10 18:02:58 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	tiny_sort(t_stack *a)
+int is_space(char c)
 {
-	t_stack	highest_node;
-
-	highest_node = find_highest_node(*a);
-	if (highest_node == *a)
-		ra(a);
-	else if ((*a)->next == highest_node)
-		rra(a);
-	if ((*a)->value > (*a)->next->value)
-		sa(a)
+	return (c == ' ' || (c >= 9 && c <= 13));
+}
+long	ft_atol(char *str)
+{
+	long nbr;
+	int		i;
+	int		signal;
+	
+	
+	i = 0;
+	signal = 1;
+	while (is_space(str[i]))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+		{
+			signal*= -1;
+		}
+		i++;
+	}
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	{
+		nbr = nbr * 10 + (str[i] - '0');
+		i++;	
+	}
+	return (signal * nbr);
 }
