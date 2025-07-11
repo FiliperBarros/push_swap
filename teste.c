@@ -6,7 +6,7 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 15:59:34 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/07/11 15:49:02 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/07/11 18:00:56 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(int ac, char **argv)
 
 	
 	if (ac != 5)
-	return (-1);
+		return (-1);
 	//allocate memory for nodes; 
 	head = malloc(sizeof(t_stack));
 	one = malloc(sizeof(t_stack));
@@ -56,7 +56,9 @@ int	main(int ac, char **argv)
 
 	print_stack(head);
 	ft_printf("\n");
-	head = rotate(head);
+	
+	ra(&head);
+	
 	ft_printf("\n----------------------------------------------------\n\n");
 	print_stack(head);
 }
