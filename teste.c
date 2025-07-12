@@ -6,7 +6,7 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 15:59:34 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/07/12 16:43:21 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/07/12 16:54:14 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ int	main(int ac, char **argv)
 	t_stack	*three;
 	t_stack	*b;
 
-	b = NULL;
 	head = NULL;
+	b = NULL;
 	
 	//t_stack *a;
 
@@ -63,6 +63,7 @@ int	main(int ac, char **argv)
 	ft_printf("\n");
 	ft_printf("STACK B\n");
 	print_stack(b);
+	ft_printf("\n");
 	
 	push(&b, &head);
 	
