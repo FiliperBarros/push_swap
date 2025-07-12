@@ -6,12 +6,12 @@
 #    By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/23 19:14:12 by frocha-b          #+#    #+#              #
-#    Updated: 2025/07/12 11:57:58 by frocha-b         ###   ########.fr        #
+#    Updated: 2025/07/12 16:09:00 by frocha-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
-SRCS =  operations.c teste.c helper_functions.c
+SRCS =  swap.c rotate.c teste.c helper_functions.c
 OBJS = $(SRCS:.c=.o)
 LIBFTDIR= libft
 LIBFT = $(LIBFTDIR)/libft.a
