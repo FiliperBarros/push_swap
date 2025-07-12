@@ -6,7 +6,7 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 15:59:34 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/07/11 18:00:56 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/07/12 15:39:28 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	main(int ac, char **argv)
 	print_stack(head);
 	ft_printf("\n");
 	
-	ra(&head);
+	sa(&head);
 	
 	ft_printf("\n----------------------------------------------------\n\n");
 	print_stack(head);
