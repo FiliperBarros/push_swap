@@ -6,7 +6,7 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 18:56:28 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/07/12 16:04:28 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/07/12 16:40:44 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	rotate(t_stack	**stack);
 void	ra(t_stack **a);
 
 
-void	push(t_stack	*stack_to, t_stack	*stack_from);
+void	push(t_stack	**stack_to, t_stack	**stack_from);
 void	pa(t_stack	*a, t_stack	*b);
 void	pb(t_stack	*b, t_stack	*a);
 

@@ -6,7 +6,7 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 15:59:34 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/07/12 15:39:28 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/07/12 16:43:21 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 
 void	print_stack(t_stack *a)
 {
+	if (!a)
+		ft_printf("EMPTY STACK");
 	while (a)
 	{
 		ft_printf("value:%d   |  index: %d\n", a->value, a->index);
@@ -28,7 +30,9 @@ int	main(int ac, char **argv)
 	t_stack	*one;
 	t_stack *two;
 	t_stack	*three;
+	t_stack	*b;
 
+	b = NULL;
 	head = NULL;
 	
 	//t_stack *a;
@@ -54,11 +58,18 @@ int	main(int ac, char **argv)
 	head->next->next->next = three;
 	head->next->next->next->next = NULL;
 
+	ft_printf("STACK A\n");
 	print_stack(head);
 	ft_printf("\n");
+	ft_printf("STACK B\n");
+	print_stack(b);
 	
-	sa(&head);
+	push(&b, &head);
 	
 	ft_printf("\n----------------------------------------------------\n\n");
+	ft_printf("STACK A\n");
 	print_stack(head);
+	ft_printf("\n");
+	ft_printf("STACK B\n");
+	print_stack(b);
 }
