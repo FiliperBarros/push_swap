@@ -6,20 +6,18 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 15:24:17 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/07/10 18:10:00 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/07/28 18:21:05 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int check_args(char **argv)
+static bool check_args(char **argv)
 {
-	if (!has_duplicate(argv) && all_num(argv) && all_int(argv))
-		return (1);
-	return (0);
+	return((!has_duplicate(argv)) && all_num(argv) && all_int(argv));
 }
 
-static int	has_duplicate(char **argv)
+static bool	has_duplicate(char **argv)
 {
 	int i;
 	int	j;
@@ -39,7 +37,7 @@ static int	has_duplicate(char **argv)
 	return (1);
 }
 
-static int	all_num(char **argv)
+static bool	all_num(char **argv)
 {
 	int		i;
 	int		j;
@@ -61,7 +59,7 @@ static int	all_num(char **argv)
 	return (1);
 }
 
-static int all_int(char **argv)
+static bool all_int(char **argv)
 {
 	long	nbr;
 	int		i;
