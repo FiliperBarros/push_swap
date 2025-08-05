@@ -6,7 +6,7 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 18:56:28 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/07/28 18:20:40 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/08/05 18:25:29 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ typedef struct s_stack
 
 void 	ft_error(void);
 bool check_args(char **argv);
+int	stack_size(t_stack	**a);
+
 
 
 t_stack	*get_last_node(t_stack *stack);
