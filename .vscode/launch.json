@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/frocha-b/CommonCore/push_swap",
-      "program": "/home/frocha-b/CommonCore/push_swap/build/Debug/outDebug",
+      "cwd": "/home/frocha-b/cc/push_swap",
+      "program": "/home/frocha-b/cc/push_swap/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

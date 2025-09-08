@@ -1,52 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   get_node.c                   			            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/12 16:06:51 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/08/05 18:28:33 by frocha-b         ###   ########.fr       */
+/*   Created: 2025/09/01 16:35:06 by frocha-b          #+#    #+#             */
+/*   Updated: 2025/09/02 11:37:22 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rotate(t_stack	**stack)
+t_stack	*get_last_node(t_stack	**stack)
 {
-	t_stack	*first_node;
-	t_stack	*last_node;
 	t_stack	*temp;
 
-	if (!(*stack)->next)
-		return ;
 	temp = *stack;
-	first_node = temp->next;
-	// last_node = get_last_node(*stack);
-	
-	last_node->next = temp;
-	temp->next = NULL;
-	*stack = first_node;
+	while (temp->next)
+		temp = temp->next;
+	return	(temp);
 }
-void	reverse_rotate(t_stack	**stack)
+
+t_stack	*get_previous_last_node(t_stack	**stack)
 {
-	t_stack	*first_node;
-	t_stack	*last_node;
 	t_stack	*temp;
 
-	if (!(*stack)->next)
-		return	;
 	temp = *stack;
-	
+	while (temp->next->next)
+		temp = temp->next;
+	return	(temp);
 }
-void	ra(t_stack **stack)
+t_stack *get_highest_node(t_stack **stack)
 {
-	ft_printf("ra\n");
-	rotate(stack);
-}
+	t_stack *temp;
+	t_stack *highest_stack;
 
-void	rb(t_stack **stack)
-{
-	ft_printf("rb\n");
-	rotate(stack);
+	temp = *stack;
+	highest_stack = temp;
+	while (temp)
+	{
+		if(temp->value > highest_stack->value)
+			highest_stack = temp;
+		temp = temp->next;
+	}
+	return (highest_stack);
 }

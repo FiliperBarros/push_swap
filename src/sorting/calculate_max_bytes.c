@@ -1,44 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_utils.c                                       :+:      :+:    :+:   */
+/*   calculate_max_bytes.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/10 17:54:25 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/07/10 18:02:58 by frocha-b         ###   ########.fr       */
+/*   Created: 2025/09/03 12:08:44 by frocha-b          #+#    #+#             */
+/*   Updated: 2025/09/03 14:54:08 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int is_space(char c)
+int	calculate_max_bytes(int	max_index)
 {
-	return (c == ' ' || (c >= 9 && c <= 13));
-}
-long	ft_atol(char *str)
-{
-	long nbr;
-	int		i;
-	int		signal;
+	int	bytes;
 	
-	
-	i = 0;
-	signal = 1;
-	while (is_space(str[i]))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
-		{
-			signal*= -1;
-		}
-		i++;
-	}
-	while (str[i] && str[i] >= '0' && str[i] <= '9')
-	{
-		nbr = nbr * 10 + (str[i] - '0');
-		i++;	
-	}
-	return (signal * nbr);
+	bytes = 0;
+	while(max_index >> bytes != 0)
+		bytes++;
+	return (bytes);
 }
