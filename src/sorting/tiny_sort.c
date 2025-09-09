@@ -6,7 +6,7 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 18:53:53 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/09/08 14:33:45 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/09/09 10:10:53 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	move_min_value_to_top(t_stack	**stack)
 	}
 	while ((*stack)->value != min)
 	{
-		if (min_index <= 2)
+		if (min_index  == 1)
 			ra(stack);
 		else
 			rra(stack);
@@ -65,10 +65,7 @@ void	sort_five_numbers(t_stack **a, t_stack	**b)
 {
 	move_min_value_to_top(a);
 	pb(b, a);
-	move_min_value_to_top(a);
-	pb(b, a);
-	sort_three_numbers(a);
-	pa(a, b);
+	sort_four_numbers(a, b);
 	pa(a, b);
 }
 

@@ -1,5 +1,6 @@
 a.out
 *.o
 *.txt
-.vscode/
+.vscode
 *.excalidraw
+push_swap
