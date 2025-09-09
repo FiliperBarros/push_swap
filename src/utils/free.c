@@ -6,7 +6,7 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 16:58:24 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/09/08 14:42:01 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/09/09 11:02:07 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	free_argv(char **argv)
 {
-	int j;
+	int	j;
 
 	j = 0;
-	while(argv[j])
+	while (argv[j])
 	{
 		free(argv[j]);
 		j++;
@@ -28,11 +28,11 @@ void	free_argv(char **argv)
 void	free_stack(t_stack	*stack)
 {
 	t_stack	*temp;
-	
+
 	while (stack)
 	{
 		temp = stack->next;
 		free(stack);
 		stack = temp;
 	}
-}	
+}

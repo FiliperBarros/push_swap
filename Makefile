@@ -6,7 +6,7 @@
 #    By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/23 19:14:12 by frocha-b          #+#    #+#              #
-#    Updated: 2025/09/08 17:02:14 by frocha-b         ###   ########.fr        #
+#    Updated: 2025/09/09 16:15:53 by frocha-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,6 @@ SRC_FILES =	\
 	$(UTILS_DIR)/ft_split.c \
 	$(UTILS_DIR)/get_node.c \
 	$(SRCS_DIR)/main.c \
-	$(SRCS_DIR)/teste.c
 	
 #Object files
 OBJS = $(patsubst %.c,$(OBJ_DIR)/%.o,$(SRC_FILES))

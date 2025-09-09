@@ -6,7 +6,7 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 12:13:15 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/09/03 15:06:38 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/09/09 11:03:23 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 long	ft_atol(const char *n)
 {
-	int	i;
-	int	signal;
+	int		i;
+	int		signal;
 	long	res;
 
 	i = 0;
@@ -36,4 +36,3 @@ long	ft_atol(const char *n)
 	}
 	return (res * signal);
 }
-

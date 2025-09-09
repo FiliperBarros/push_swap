@@ -6,7 +6,7 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 12:46:12 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/09/08 23:15:15 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/09/09 10:58:51 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 bool	is_stack_sorted(t_stack	**a)
 {
-	t_stack *temp;
-	
+	t_stack	*temp;
+
 	temp = *a;
-	while(temp->next)
-	{	
-		if(temp->value > temp->next->value)
+	while (temp->next)
+	{
+		if (temp->value > temp->next->value)
 			return (0);
 		temp = temp->next;
 	}

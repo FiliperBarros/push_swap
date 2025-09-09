@@ -6,7 +6,7 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 17:48:13 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/09/09 10:15:23 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/09/09 12:01:08 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,28 @@
 
 void	sort_index(t_stack	**stack)
 {
-	int	i;
-	int	min;
+	int		i;
+	int		min;
+	int		index;
 	t_stack	*current;
-	int index;
-	
+
 	i = 0;
 	index = 0;
 	while (i < stack_size(stack))
 	{
 		current = *stack;
 		min = INT_MAX;
-		while(current)
+		while (current)
 		{
 			if (current->value <= min && current->index == -1)
 				min = current->value;
 			current = current->next;
 		}
 		current = *stack;
-		while(current->value != min)
+		while (current->value != min)
 			current = current->next;
 		current->index = index;
 		index++;
 		i++;
-		print_stack(*stack);
 	}
 }
-

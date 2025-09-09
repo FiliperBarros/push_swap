@@ -6,7 +6,7 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 18:53:53 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/09/09 10:10:53 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/09/09 11:01:25 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	move_min_value_to_top(t_stack	**stack)
 {
 	t_stack	*current_node;
-	int	min;
-	int	index;
-	int	min_index;
+	int		min;
+	int		index;
+	int		min_index;
 
 	current_node = *stack;
 	min = current_node->value;
@@ -34,12 +34,13 @@ void	move_min_value_to_top(t_stack	**stack)
 	}
 	while ((*stack)->value != min)
 	{
-		if (min_index  == 1)
+		if (min_index == 1)
 			ra(stack);
 		else
 			rra(stack);
 	}
 }
+
 void	sort_three_numbers(t_stack **a)
 {
 	t_stack	*highest_node;
@@ -48,7 +49,7 @@ void	sort_three_numbers(t_stack **a)
 	if (highest_node == *a)
 		ra(a);
 	else if ((*a)->next == highest_node)
-	 	rra(a);
+		rra(a);
 	if ((*a)->value > (*a)->next->value)
 		sa(a);
 }
@@ -78,9 +79,8 @@ void	tiny_sort(t_stack **a, t_stack	**b)
 		ra(a);
 	if (size == 3)
 		sort_three_numbers(a);
-	if (size == 4)	
+	if (size == 4)
 		sort_four_numbers(a, b);
 	if (size == 5)
 		sort_five_numbers(a, b);
 }
-

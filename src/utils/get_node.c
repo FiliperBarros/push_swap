@@ -19,7 +19,7 @@ t_stack	*get_last_node(t_stack	**stack)
 	temp = *stack;
 	while (temp->next)
 		temp = temp->next;
-	return	(temp);
+	return (temp);
 }
 
 t_stack	*get_previous_last_node(t_stack	**stack)
@@ -29,18 +29,19 @@ t_stack	*get_previous_last_node(t_stack	**stack)
 	temp = *stack;
 	while (temp->next->next)
 		temp = temp->next;
-	return	(temp);
+	return (temp);
 }
-t_stack *get_highest_node(t_stack **stack)
+
+t_stack	*get_highest_node(t_stack **stack)
 {
-	t_stack *temp;
-	t_stack *highest_stack;
+	t_stack	*temp;
+	t_stack	*highest_stack;
 
 	temp = *stack;
 	highest_stack = temp;
 	while (temp)
 	{
-		if(temp->value > highest_stack->value)
+		if (temp->value > highest_stack->value)
 			highest_stack = temp;
 		temp = temp->next;
 	}

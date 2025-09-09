@@ -6,7 +6,7 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 16:19:40 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/09/02 15:51:41 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/09/09 10:39:19 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	push(t_stack **stack_to, t_stack **stack_from)
 {
 	t_stack	*temp;
-	
+
 	if (!*stack_to || !stack_to)
 	{
 		temp = (*stack_from)->next;
@@ -37,6 +37,7 @@ void	pa(t_stack **stack_a, t_stack **stack_b)
 	write(1, "pa\n", 3);
 	push(stack_a, stack_b);
 }
+
 void	pb(t_stack **stack_b, t_stack **stack_a)
 {
 	write(1, "pb\n", 3);
