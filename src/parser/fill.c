@@ -6,7 +6,7 @@
 /*   By: frocha-b <frocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 16:59:37 by frocha-b          #+#    #+#             */
-/*   Updated: 2025/09/08 16:22:30 by frocha-b         ###   ########.fr       */
+/*   Updated: 2025/09/08 17:24:20 by frocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ t_stack *add_node(t_stack **stack_a, int i,char **new_argv)
 	return (node);
 }
 void	fill(t_stack **stack_a, char **new_argv)
-{
+{	
 	int i;
 	int	argv_size;
 	t_stack	*temp;
@@ -53,5 +53,5 @@ void	fill(t_stack **stack_a, char **new_argv)
 		(current) = (current)->next;
 	}
 	(*stack_a) = temp;
-	
+	print_stack(*stack_a);
 }
