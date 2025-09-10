@@ -1,9 +1,11 @@
+```
     ____             __       _____                   
    / __ \__  _______/ /_     / ___/      ______ _____ 
   / /_/ / / / / ___/ __ \    \__ \ | /| / / __ `/ __ \
  / ____/ /_/ (__  ) / / /   ___/ / |/ |/ / /_/ / /_/ /
 /_/    \__,_/____/_/ /_/   /____/|__/|__/\__,_/ .___/ 
                                              /_/      
+```
 Overview
 
 The goal of this project is to sort a stack of integers (stack A) using a limited set of stack operations and an empty auxiliary stack (stack B). The challenge is to do this using as few operations as possible.
