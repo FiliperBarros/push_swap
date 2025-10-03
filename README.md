@@ -43,20 +43,19 @@ This implementation uses **Radix Sort**, which sorts numbers **bit by bit**, fro
 
 ### 🛠 Compile:
 
-```bash
 Compile with:
 
+```bash
 make
-
-
+```
 Run with:
-
+```bash
 ./push_swap [numbers...]
-
+```
 
 Example:
-
+```bash
 ./push_swap 4 2 9 1 7
-
+```
 
 The program outputs the series of operations needed to sort the stack.
