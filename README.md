@@ -1,6 +1,5 @@
 
-<h1 align="center"> Push_Swap<br></h1>
-<br>
+<h1 align="center"> Push_Swap<br><br></h1>
 <br>
 
 ---
