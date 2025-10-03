@@ -2,7 +2,7 @@
 <h1 align="center"> Push_Swap</h1>
 
 
-
+---
 ## 📝 Overview
 
 The goal of this project is to **sort a stack of integers (stack A)** using a **limited set of stack operations** and an **empty auxiliary stack (stack B)**.  
